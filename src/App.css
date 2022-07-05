@@ -1,0 +1,24 @@
+.App {
+  text-align: center;
+  justify-content: center;
+}
+.main {
+  width: 500px;
+  height: 500px;
+  border: 1px solid black;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.screen {
+  width: 450px;
+  height: 70px;
+  border: 1px solid black;
+}
+.keyboard{
+  width: 450px;
+  height: 350px;
+  border: 1px solid black;
+  margin-top: 10px;
+}
