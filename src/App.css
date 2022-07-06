@@ -12,13 +12,35 @@
   flex-direction: column;
 }
 .screen {
-  width: 450px;
+  width: 440px;
   height: 70px;
   border: 1px solid black;
+  align-items: center;
+  justify-content: center;
 }
-.keyboard{
+.screen > h1 {
+  margin-left: 10px;
+}
+.keyboard {
   width: 450px;
   height: 350px;
-  border: 1px solid black;
   margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+button {
+  border: 1px solid black;
+  width: 110px;
+  justify-content: center;
+  align-items: center;
+  display: grid;
+  font-size: 20px;
+}
+button:hover {
+  background-color: white;
+  cursor: pointer;
+}
+.number{
+  background-color: beige;
 }
