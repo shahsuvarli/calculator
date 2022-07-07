@@ -8,7 +8,13 @@ export default function Calculator() {
   return (
     <div className="main">
       <div className="screen">
-        <h1>{state.valueOnScreen}</h1>
+        <h1>
+          {typeof state.result === "number"
+            ? state.result
+            : state.secondValue
+            ? state.secondValue
+            : state.firstValue}
+        </h1>
       </div>
       <div className="keyboard">
         {keys.map((key) => (
@@ -21,6 +27,7 @@ export default function Calculator() {
           </button>
         ))}
       </div>
+      {typeof initialState.firstValue}
     </div>
   );
 }
