@@ -14,5 +14,5 @@ export const keys = [
   { id: 12, name: "/", type: "DIVISION" },
   { id: 13, name: "0", type: "NUMBER", value: 0 },
   { id: 14, name: "C", type: "DELETE" },
-  { id: 15, name: "=", type: "RESUTLT" },
+  { id: 15, name: "=", type: "EQUAL" },
 ];

@@ -1,51 +1,26 @@
-import { createContext, useReducer, useState } from "react";
+import { useReducer } from "react";
 import { keys } from "./keys";
-
-export const initialState = {
-  value: 0,
-};
-
-function reducer(state, action) {
-  switch (action.type) {
-    case "NUMBER":
-      console.log(state);
-      return { ...state, valueOnHold: action.payload };
-  }
-}
-
-export const appContext = createContext({});
+import { initialState, Reducer } from "./provider";
 
 export default function Calculator() {
+  const [state, dispatch] = useReducer(Reducer, initialState);
+  console.log(state);
   return (
     <div className="main">
-      <Screen />
-      <Keyboard />
+      <div className="screen">
+        <h1>{state.valueOnScreen}</h1>
+      </div>
+      <div className="keyboard">
+        {keys.map((key) => (
+          <button
+            key={key.id}
+            className={key.type.toLowerCase()}
+            onClick={() => dispatch({ type: key.type, payload: key })}
+          >
+            {key.name}
+          </button>
+        ))}
+      </div>
     </div>
   );
 }
-
-const Screen = () => {
-  return (
-    <div className="screen">
-      <h1>{initialState.value}</h1>
-    </div>
-  );
-};
-
-const Keyboard = () => {
-  const [state, dispatch] = useReducer(reducer, initialState);
-
-  return (
-    <div className="keyboard">
-      {keys.map((key) => (
-        <button
-          key={key.id}
-          className={key.type.toLowerCase()}
-          onClick={() => dispatch({ type: key.type, payload: key.value })}
-        >
-          {key.name}
-        </button>
-      ))}
-    </div>
-  );
-};

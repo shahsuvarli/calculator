@@ -17,9 +17,11 @@
   border: 1px solid black;
   align-items: center;
   justify-content: center;
+  text-align: right;
 }
 .screen > h1 {
   margin-left: 10px;
+  margin-right: 10px;
 }
 .keyboard {
   width: 450px;
@@ -41,6 +43,6 @@ button:hover {
   background-color: white;
   cursor: pointer;
 }
-.number{
+.number {
   background-color: beige;
 }
