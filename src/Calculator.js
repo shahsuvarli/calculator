@@ -1,19 +1,23 @@
-import { useReducer } from "react";
+import { useReducer, useRef, useState } from "react";
+import { Button } from "./Button.styled";
 import { keys } from "./keys";
 import { initialState, Reducer } from "./provider";
 
 export default function Calculator() {
   const [state, dispatch] = useReducer(Reducer, initialState);
-  console.log(state);
+  const valueRef = useRef();
+
   return (
     <div className="main">
       <div className="screen">
         <h1>
-          {typeof state.result === "number"
-            ? state.result
-            : state.secondValue
-            ? state.secondValue
-            : state.firstValue}
+          <input
+            dir="rtl"
+            ref={valueRef}
+            placeholder="Value"
+            value={state.inputValue}
+            onChange={() => console.log("first")}
+          />
         </h1>
       </div>
       <div className="keyboard">
@@ -27,7 +31,6 @@ export default function Calculator() {
           </button>
         ))}
       </div>
-      {typeof initialState.firstValue}
     </div>
   );
 }

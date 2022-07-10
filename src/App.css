@@ -2,6 +2,13 @@
   text-align: center;
   justify-content: center;
 }
+input {
+  height: 50px;
+  font-size: 30px;
+  width: 400px;
+  border: none;
+  margin-right: 10px;
+}
 .main {
   width: 500px;
   height: 500px;
@@ -14,16 +21,17 @@
 }
 .screen {
   width: 440px;
-  height: 70px;
+  /* height: 80px; */
   border: 1px solid black;
   align-items: center;
   justify-content: center;
+  align-items: center;
   text-align: right;
   border-radius: 5px;
 }
 .screen > h1 {
-  margin-left: 10px;
-  margin-right: 10px;
+  /* margin-left: 10px;
+  margin-right: 10px; */
 }
 .keyboard {
   width: 450px;
