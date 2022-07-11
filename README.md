@@ -1,3 +1,3 @@
-# Create Box Form
+# Calculator
 
-[Create Box Form](https://create-box-form.netlify.app/)
+[Calculator](https://sample-react-calculator-app.netlify.app)
