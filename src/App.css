@@ -5,11 +5,11 @@
 input {
   height: 50px;
   font-size: 30px;
-  width: 340px;
+  width: 290px;
   border: none;
   margin-right: 10px;
   background-color: rgb(207, 233, 202);
-  color: dodgerblue;
+  color: rgb(32, 83, 232);
 }
 input:focus {
   border: none;
@@ -19,7 +19,7 @@ input:focus {
 }
 .main {
   margin-top: 20px;
-  width: 400px;
+  width: 350px;
   height: 500px;
   border: 1px solid black;
   justify-content: center;
@@ -30,7 +30,7 @@ input:focus {
   background-color: rgb(207, 233, 202);
 }
 .screen {
-  width: 350px;
+  width: 320px;
   border: 3px solid white;
   align-items: center;
   justify-content: center;
@@ -39,8 +39,8 @@ input:focus {
   border-radius: 5px;
 }
 .keyboard {
-  width: 350px;
-  height: 350px;
+  width: 320px;
+  height: 320px;
   margin-top: 10px;
   display: flex;
   flex-wrap: wrap;
@@ -48,12 +48,13 @@ input:focus {
   border-radius: 5px;
   border: 3px solid white;
 }
-#0 {
+/* #0 {
   background-color: red !important;
-}
+} */
 button {
   border: 0.5px solid white;
-  width: 87px;
+  width: 80px;
+  height: 80px;
   font-size: 20px;
   background-color: rgb(95, 239, 247);
   font-weight: bold;
@@ -68,4 +69,5 @@ button:hover {
   background-color: rgb(32, 83, 232);
   color: white;
   font-weight: bold;
+  border: 0.5px solid white;
 }
